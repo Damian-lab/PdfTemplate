@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %} 
+mypdf
+{% endblock title %}
+
+{% block content %}
+{% for mypdf in object_list %}
+{{mypdf}}
+<a href="{% url 'mypdf:mypdf-pdf-view' mypdf.pk %}"><button class="btn btn-primary">pdf</button></a> 
+<br>
+{% endfor %}
+{% endblock content %} 

@@ -15,7 +15,7 @@ def mypdf_render_pdf_view(request, *args, **kwargs):
 
     pk = kwargs.get('pk')
     mypdf = get_object_or_404(MyPdf, pk=pk)
-    template_path = 'mypdf/pdf2.html'
+    template_path = 'mypdf/pdf.html'
     context = {'mypdf': mypdf}
     # Create a Django response object, and specify content_type as pdf
     response = HttpResponse(content_type='application/pdf')
